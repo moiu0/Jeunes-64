@@ -1,0 +1,441 @@
+/*######################################### JEUNES ###########################################*/
+
+html,                 /*Il n'y a plus de marge sur toute la page Web*/
+body {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+}
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ARRIERE PLAN~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+.fond {               /*Application d'un fond d'écran*/
+    position:fixed;   /*Position fixée (pas de déplacement sur la page web)*/
+  top:70%;
+  left:50%;
+  transform:translate(-50%,-50%);       /*Positionnement au centre de la page*/
+}
+
+.fond img {
+  width: 1300px;
+  height: 850px;         /*Dimension de l'image*/
+
+  opacity: 35%;           /*Transparance de l'image*/
+
+  z-index: 0;            /* Place du calque par rapport aux autres éléments, ici le plus bas*/
+}
+
+body>p{
+    color: rgb(0, 0, 49);
+
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 30px;
+
+    letter-spacing: 2px;
+
+    text-align: center;
+    position: relative;
+    top:20%;
+    left: 50%;
+    transform:translate(-50%,-50%);
+}
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ENTETE~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+.entete img {             /*Image JEUNES Blanche*/
+  position: fixed;          /*Position fixée (pas de déplacement sur la page web)*/
+
+  top: -200px;
+  right: -20px;            /*Positionnement*/
+
+  height: 500px;
+  width: 400px;             /*Dimension*/
+}
+
+.entete H2 {               /*Titre*/
+  color: aliceblue;      /*Couleur*/
+
+  font-family: 'Trebuchet MS', sans-serif;    /* Style de police*/
+  font-size: 50px;       /*Taille de Police*/
+  font-weight: lighter;   /* Epaisseur de police*/
+  line-height: 0;
+
+  margin-top: 110px;
+  margin-right: 20px;        /*Positionnement*/
+
+  text-align: right;        /* postionnement à droite de la page web*/
+}
+
+.bandeau {
+  position: fixed;         /*Position fixée (pas de déplacement sur la page web)*/
+
+  background: #000031;   /*Couleur*/
+
+  border-left: 2px solid rgb(40, 141, 236);   
+  border-bottom: 2px solid rgb(40, 141, 236);  /*Couleur des bordures*/
+
+  border-bottom-left-radius: 10px;    /*Angles arrondis*/
+
+  height: 150px;     
+  width: 80%;        /*Dimension*/
+
+  top: 0px;
+  right: 0px;       /*Positionnement*/
+
+  z-index: 10;      /* Place du calque par rapport aux autres éléments, ici le plus haut*/
+}
+
+.logo img {      /*Image JEUNES 6.4 Blanche*/
+  position: fixed;    /*Position fixée (pas de déplacement sur la page web)*/
+
+  top: -60px;
+  left: 50px;        /*Positionnement*/
+
+  height: 275px;
+  width: 175px;    /*Dimension*/
+  transform: rotate(90deg);      /*Rotation*/
+
+}
+
+.logo {
+  position: fixed;      /*Position fixée (pas de déplacement sur la page web)*/
+
+  background: #000031;    /*Couleur*/
+
+  border-right: 2px solid rgb(40, 141, 236);
+  border-bottom: 2px solid rgb(40, 141, 236);      /*Couleur des bordures*/
+
+  border-bottom-right-radius: 10px;      /*Angles arrondis*/
+
+  height: 150px;
+  width: 20%;     /*Dimension*/
+
+  top: 0px;
+  left: 0px;      /*Positionnement*/
+
+  z-index: 10;     /* Place du calque par rapport aux autres éléments, ici le plus haut*/
+ 
+}
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ONGLET~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+.onglet li {           /*Affichage des différents onglets*/
+  display: inline;     /*Disposition en ligne de la liste*/
+
+  text-align: center;         /*Centré*/
+
+  margin: 20px;          /*Marge entre chaque mot de la liste*/
+}
+
+.onglet button{
+  background-color: rgb(0, 0, 49);
+  color:white;                   /*Couleurs*/
+
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 20px;        /*Style et taille de police*/
+
+  outline: 1px solid white;
+  border-radius:50px;
+  padding:10px 20px;           /*Espacement, arrondissement, couleur et taille du contour des boutons*/
+}
+
+
+.onglet button:hover {         /*Lorsque le curseur passe au-dessus du bouton*/
+  outline: 1px solid rgb(40, 141, 236);
+  border-radius:50px;
+  padding:20px;             /*Espacement, arrondissement, couleur et taille du contour des boutons*/
+
+  cursor:pointer;           /* Changement de forme du bouton*/
+} 
+
+.onglet {               /*Fenêtre des onglets*/
+  position: fixed;           /*Position fixée (pas de déplacement sur la page web)*/
+
+  background: rgb(0, 0, 49);       /*Couleur*/
+
+  height: 75px;        
+  width:400px;                 /*Dimension*/
+
+  top: 160px;
+  left: 50%;
+  transform: translateX(-50%);      /*Positionnement*/
+
+
+  border-radius: 50px; 
+  border: 2px solid rgb(40, 141, 236);      /*Arrondissement, couleur et taille des bordures*/
+
+  display: flex;                /*Positionnement*/
+  align-items: center;
+  
+  z-index: 10;                /* Place du calque par rapport aux autres éléments, ici le plus haut*/
+}
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Afficher Engagement~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+#divConsulter .page{    /*"Zone de texte"*/
+  width:700px;
+  height:575px;       /*Dimension*/
+
+  background-color: rgb(172, 172, 172,0.4);     /*Couleur*/
+
+  position:relative;
+  top:100%;
+  left:50%;
+  transform:translate(-50%,40%);          /*Positionnement au centre de la page*/
+
+  
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+
+.information {
+  border: 1px solid #ccc;
+  padding: 20px;
+  max-width: 500px;
+  text-align: center;
+  background-color: #fff;
+  margin: 0 auto;
+}
+
+.information p {
+  margin: 0;
+}
+
+.information h2 {
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+.information .label {
+  font-weight: bold;
+}
+
+.information .reseau {
+  color: blue;
+}
+
+.information .dates {
+  font-style: italic;
+}
+
+.information .reference {
+  margin-top: 10px;
+}
+
+.information .reference p {
+  margin-bottom: 5px;
+}
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~FORMULAIRE~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+#divConsulter>p,
+#divAfficher>p,
+#divCreer>p{
+    background-color: white;              /*Couleur d'arrière-plan du formulaire*/         
+
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;            
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);                /*Positionnement central*/
+
+
+  z-index: 9;   
+}
+#divAfficher>p,
+#divModifier>p,                  /*Titre de la page*/
+#divConsulter>p,
+#divEnvoit>p,
+#divCv>p{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  text-align: center; 
+  top: 225px;                        /*Positionnement central*/
+
+  font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: underline;                           /*Style, taille, mise en gras et soulignement du titre*/
+
+  z-index: 8;        /*Place du calque par rapport aux éléments, ici au milieu*/
+}
+               
+
+#divAfficher .formulaire,
+#divModifier .formulaire,
+#divCreer .formulaire,
+#divEnvoit .formulaire,
+#divConsulter  .formulaire{                               /*Formulaires*/
+  background-color: white;              /*Couleur d'arrière-plan du formulaire*/         
+
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;            
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);                /*Positionnement central*/
+
+  z-index: 9;     /*Place du calque par rapport aux éléments, ici au milieu*/
+} 
+
+
+fieldset { 
+  border-radius: 5%;                             /*Arrondissement des angles du cadre du formulaire*/
+  border: 5px double gray;                    /*Epaisseur, type et couleur du cadre*/
+}
+
+
+label {
+  font-family: Arial, Helvetica, sans-serif;         /*Style de police*/
+}
+
+.submit {
+  background-color: rgb(40, 141, 236);             /*Couleur du bouton*/
+
+  border-radius: 5%;
+  border: 1px solid rgb(172, 172, 172);          /*Arrondissement des angles du bouton ainsi que l'épaisseur, le type et la couleur du contour du bouton*/
+
+  width: 470px;                /*Largeur du bouton*/
+}
+
+.text p{
+    text-align: center;       /*Texte centré*/
+}
+
+.login {
+  background-color: rgb(40, 141, 236);          /*Couleur du bouton*/
+
+  border-radius: 5%;
+  border: 1px solid rgb(172, 172, 172);        /*Arrondissement des angles du bouton ainsi que l'épaisseur, le type et la couleur du contour du bouton*/
+
+  width: 235px;                 /*Texte centré*/
+
+  display:flex;
+  flex-direction: column;
+  align-items: center;          /*Positionnement central et en colonne pour aligner les boutons*/
+}
+
+.submit:hover,
+.login:hover {
+  cursor: pointer;              /*Changement de forme du curseur lorsque celui-ci passe sur le bouton*/
+}
+
+.submit:active,
+.login:active {
+  filter: brightness(80%);         /*Luminosité réduite lors d'un clic sur le bouton*/
+
+  outline: 1px solid white;      /*Affichage d'un contour lors d'un clic sur le bouton*/
+
+  cursor: pointer;            /*Changement de forme du curseur lors d'un clic sur le bouton*/
+}
+
+
+
+
+
+
+
+
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~SAVOIR-ETRE~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+table{
+
+  display:flex;                             /*Alignement en ligne des tableaux par rapport à la page*/
+  position: relative;
+              
+  top: 50%;
+  left: 12%;
+  transform: translate(-50%,70%);
+
+  border-collapse: collapse;            /*Encadrement des cellules*/
+
+  width:300px;                          /*Dimension*/     
+
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;           /*Style de police*/
+
+} 
+
+
+tr{
+  border:2px solid rgb(40, 141, 236);     /*Taille et couleur des bordures*/
+}
+
+tr:first-child{     /*Modification sur la 1ère ligne des tableaux*/
+  background: linear-gradient(to right, rgb(0,0,49),white);          /*Couleur des cellules avec 'linear-gradient' qui va créer une transition entre 2 couleurs*/
+  color: white;          /*Couleur de la police*/
+  
+}
+
+tr:nth-child(2){    /*Modification sur la 2ème ligne des tableaux*/
+  background: linear-gradient(to right, rgb(204, 203, 203),white);     /*Couleur des cellules avec 'linear-gradient' qui va créer une transition entre 2 couleurs*/
+  color: black;        /*Couleur de la police*/
+}
+
+td{
+  padding:5px;         /*écart entre les éléments (lignes, bordures de la cellule)*/
+}
+
+table li{
+  list-style-type: none;
+}
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~CREDITS~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+.credit img {
+  position: absolute;
+  top: -30px;          
+  left: 2px;              /*Positionnement du logo JEUNES 6.4*/
+}
+
+.credit .partenaires img {
+  position: relative;
+  top: 10px;
+  left: 150px;          /*Positionnement des images des partenaires*/
+
+  height: 70px;       /*Dimension des images*/
+  width: 70px;
+
+  margin: 10px;          /*Espace entre chaque image*/
+  
+}
+
+.partenaires img:hover {
+  cursor: pointer;               /*Changement de forme du curseur lorsque celui-ci passe sur le bouton*/
+}
+
+.partenaires img:active {        
+  filter: brightness(80%);        /*Luminosité réduite lors d'un clic sur le bouton*/
+
+  outline: 1px solid white;     /*Affichage d'un contour lors d'un clic sur le bouton*/
+
+  cursor: pointer;              /*Changement de forme du curseur lors d'un clic sur le bouton*/
+} 
+
+.credit p {
+  color: white;           /*Couleur du texte*/
+
+  margin-left: 10px;        /*Espace avec les autres éléments et le bas de la page web*/
+  margin-top: 20px;
+
+  font-family: 'Trebuchet MS', 'sans-serif';
+  font-size: smaller;                      /*Style et taille de police*/
+}
+
+.credit {
+  position: absolute;
+  bottom: -500px;                 /*Positionnement du bandeau de bas de page*/
+
+  background-color: rgb(0, 0, 49);         /*Couleur du bandeau*/
+
+  border-top: 2px solid rgb(40, 141, 236);          /*Epaisseur, type et couleur de la bordure du haut*/
+
+  height: 175px;
+  width: 100%;              /*Dimension*/
+}

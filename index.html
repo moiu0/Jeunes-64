@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="index.css">
+  <!-- On relie le code HTML avec le bon fichier CSS-->
+
+  <div class="entete">
+    <!-- On crée l'en-tête en ajoutant plusieurs classes pour le CSS-->
+    <div class="bandeau">
+      <!-- On ajoute un titre et deux images pour constituer le bandeau supérieur-->
+      <H2>Je donne de la valeur à mon engagement</H2>
+      <img src="Jeunes Noir et Blanc.png" />
+    </div>
+    <div class="logo">
+      <img src="Jeunes 6.4 Normal.png">
+    </div>
+  </div>
+
+  <div class="onglet">
+    <!-- C'est la fenêtre pour parcourir les différents onglets grâce à cette liste-->
+    <ul>
+      <li><button onclick="afficherFormulaire('divVisiteur')">Visiteur</button> </li>
+      <!-- On parcourt les pages grâce à des boutons-->
+      <li><button onclick="afficherFormulaire('divJeune')">Jeune</button></li> <!-- Pas de rechargement de page-->
+
+    </ul>
+  </div>
+
+</head>
+
+<body>
+
+
+  <div id="divVisiteur">
+    <!--Onglet Visiteur-->
+    <p> Bienvenue sur le site Jeunes 6.4</p>
+    <div class="fond">
+      <!-- Arrière-plan-->
+      <img src="Logo Bleu.png">
+    </div>
+
+    <div class="page">
+      <div class="information">
+        <H1>De quoi s’agit-il ?</H1> <!-- Les informations pour les visiteurs du site-->
+        <p>
+          <b>D’une opportunité :</b> celle qu’un engagement quel qu’il soit puisse être
+          considérer à sa juste valeur !
+          Toute expérience est source d’enrichissement et doit d’être reconnu
+          largement.
+          Elle révèle un potentiel, l’expression d’un savoir-être à concrétiser.<br><br>
+        </p>
+
+        <H1>A qui s’adresse-t’il ?</H1>
+        <p><b>A vous, jeunes entre 16 et 30 ans,</b> qui vous êtes investis spontanément dans une association ou dans
+          tout type d’action formelle ou informelle, et qui avez partagé de votre temps, de votre énergie, pour apporter
+          un soutien, une aide, une compétence. <br><br>
+          <b>A vous, responsables de structures ou référents d’un jour,</b> qui avez
+          croisé la route de ces jeunes et avez bénéficié même ponctuellement de
+          cette implication citoyenne !<br>
+          C’est l’occasion de vous engager à votre tour pour ces jeunes en confirmant leur richesse pour en avoir été un
+          temps les témoins mais aussi les
+          bénéficiaires !<br><br>
+          <b>A vous, employeurs, recruteurs en ressources humaines,
+            représentants d’organismes de formation,</b> qui recevez ces jeunes,
+          pour un emploi, un stage, un cursus de qualification, pour qui le savoir-être
+          constitue le premier fondement de toute capacité humaine.
+        </p><br><br>
+        <p>Cet engagement est une ressource à valoriser au fil d'un
+          parcours en 3 étapes :</p>
+      </div>
+
+      <div class="tableaux">
+        <table>
+          <tr>
+            <td><b>1ère étape :</b> La valorisation</td>
+          </tr>
+          <tr>
+            <td>Décrivez votre expérience et mettez en
+              avant ce que vous en
+              avez retiré.</td>
+          </tr>
+        </table>
+
+        <table>
+          <tr>
+            <td><b>2ème étape :</b> La confirmation</td>
+          </tr>
+          <tr>
+            <td>Confirmez cette expérience et ce que vous
+              avez pu constater au
+              contact de ce jeune.</td>
+          </tr>
+        </table>
+
+        <table>
+          <tr>
+            <td><b>3ème étape :</b> La consultation</td>
+          </tr>
+          <tr>
+            <td>Validez cet engagement
+              en prenant en compte sa
+              valeur.<br></td>
+          </tr>
+        </table>
+      </div>
+
+    </div>
+
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div id="divJeune">
+    <!-- Onglet Jeunes-->
+
+    <p> Bienvenue sur le site Jeunes 6.4</p> <!-- Arrière-plan-->
+    <div class="fond">
+      <img src="Logo Bleu.png">
+    </div>
+
+    <div class="formulaire">
+      <!--Formulaire pour diriger les utilisateurs qui ont ou n'ont pas de compte-->
+      <fieldset>
+        <div class="text">
+          <p> Pas encore de compte ? <button class="login" onclick="afficherFormulaire('divInscription')">Inscris-toi
+              ici :
+            </button>
+          </p>
+          <br>
+          <p>Déjà inscrit ? <button class="login" onclick="afficherFormulaire('divConnexion')"> Connecte-toi ici :
+            </button></p>
+        </div>
+      </fieldset>
+    </div>
+  </div>
+
+  <div id="divInscription">
+    <!--Formulaire d'inscription pour les utilisateurs qui n'ont pas de compte-->
+    <p> Inscription :</p>
+    <div class="fond">
+      <img src="Logo Bleu.png">
+    </div>
+
+    <form action="Inscription.php" enctype="multipart/form-data" method="post" id="form">
+      <!-- Les informations données dans le formulaires sont transmises à un fichier PHP-->
+
+      <div class="formulaire">
+        <fieldset>
+
+          <label>Prénom :
+            <input type="text" id="prenom" name="prenom" maxlength="50" required>
+          </label> <br><br>
+
+          <label>Nom :
+            <input type="text" id="nom" name="nom" maxlength="50" required>
+          </label>
+
+          <br><br>
+
+          <label>Email :
+            <input type="email" id="email" name="email" required>
+          </label>
+
+          <br><br>
+
+          <label>Date de naissance :
+
+            <input type="date" name="naissance" id="datePickerId" required>
+          </label>
+
+          <br><br>
+
+          <label>Mot de passe :
+            <input type="password" id="mdp" name="mdp" minlength="4" maxlength="10" placeholder="10 caractères max"
+              required>
+          </label>
+
+          <br><br>
+
+          <label>Confirmer mot de passe :
+            <input type="password" id="cmdp" name="cmdp" minlength="4" maxlength="10" required>
+          </label>
+
+          <br><br>
+          <button class="submit" type="submit">Confirmer</button>
+          <!--Envoi des données au fichier PHP et retour au 1er formulaire-->
+
+        </fieldset>
+      </div>
+
+      <br>
+    </form>
+  </div>
+
+
+
+  <div id="divConnexion">
+
+    <!--Formulaire d'inscription pour les utilisateurs qui n'ont pas de compte-->
+    <p> Connexion :</p>
+    <div class="fond">
+      <img src="Logo Bleu.png">
+    </div>
+
+
+    <form action="connexion.php" enctype="multipart/form-data" method="post" id="form">
+      <!-- Les informations données dans le formulaires sont transmises à un fichier PHP-->
+
+      <div class="formulaire">
+        <fieldset>
+
+          <label>Email :
+            <input type="text" id="email" name="email" required>
+          </label>
+
+          <br><br>
+
+          <label>Mot de passe :
+            <input type="password" id="mdp" name="mdp" minlength="4" maxlength="10" placeholder="10 caractères max"
+              required>
+          </label>
+
+          <br><br>
+          <button class="submit" type="submit">Confirmer</button>
+
+        </fieldset>
+      </div>
+
+      <br>
+    </form>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div id="divRéférent">
+    <!-- Onglet Référent-->
+
+
+    <p> Bienvenue sur le site Jeunes 6.4</p> <!-- Arrière-plan-->
+    <div class="fond">
+      <img src="Logo Bleu.png">
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div id="divConsultant">
+    <!-- Onglet Consultant-->
+
+    <p> Bienvenue sur le site Jeunes 6.4</p> <!-- Arrière-plan-->
+    <div class="fond">
+      <img src="Logo Bleu.png">
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+  <script>
+
+    function afficherFormulaire(div) {
+      var x;
+
+      if (div != "divVisiteur") {
+        var x = document.getElementById("divVisiteur")
+        if (x.style.display === "block") {
+          x.style.display = "none";
+        }
+      }
+      if (div != "divJeune") {
+        var x = document.getElementById("divJeune")
+        if (x.style.display === "block") {
+          x.style.display = "none";
+        }
+      }
+      if (div != "divInscription") {
+        var x = document.getElementById("divInscription")
+        if (x.style.display === "block") {
+          x.style.display = "none";
+        }
+      }
+      if (div != "divConnexion") {
+        var x = document.getElementById("divConnexion")
+        if (x.style.display === "block") {
+          x.style.display = "none";
+        }
+      }
+      if (div != "divRéférent") {
+        var x = document.getElementById("divRéférent")
+        if (x.style.display === "block") {
+          x.style.display = "none";
+        }
+      }
+      if (div != "divConsultant") {
+        var x = document.getElementById("divConsultant")
+        if (x.style.display === "block") {
+          x.style.display = "none";
+        }
+      }
+
+      x = document.getElementById(div);
+      if (x.style.display === "none") {
+        x.style.display = "block";
+      }
+
+    }
+
+
+
+    var y = document.getElementById("divVisiteur")
+    y.style.display = "block";
+    var y = document.getElementById("divJeune")
+    y.style.display = "none";
+    var y = document.getElementById("divInscription")
+    y.style.display = "none";
+    var y = document.getElementById("divConnexion")
+    y.style.display = "none";
+    var y = document.getElementById("divRéférent")
+    y.style.display = "none";
+    var y = document.getElementById("divConsultant")
+    y.style.display = "none";
+
+
+
+
+  </script>
+
+  <!-- Pour le formulaire d'inscription, une date strictement supérieure à 25 ans et 0 jour ne peut être donnée pour la date de naissance-->
+  <script>
+    var now = new Date();
+    var cetteannee = now.getFullYear();
+    var anneeprecedente = new Date();
+    anneeprecedente.setFullYear(cetteannee - 18);
+    datePickerId.max = anneeprecedente.toISOString().split("T")[0];
+    anneeprecedente.setFullYear(cetteannee - 25);
+    datePickerId.min = anneeprecedente.toISOString().split("T")[0];
+  </script>
+
+
+
+  <script>
+
+    function confirmer_mdp(e) {
+      var mdpinput = document.getElementById('mdp');
+      var cmdpinput = document.getElementById('cmdp');
+      if (mdpinput.value !== cmdpinput.value) {
+        alert('Les mots de passe ne correspondent pas.');
+        e.preventDefault();
+      } else {
+        alert('inscription réussie');
+      }
+    }
+    var formulaire = document.getElementById('form');
+    formulaire.addEventListener('submit', confirmer_mdp);
+
+
+  </script>
+
+
+
+</body>
+
+<footer>
+  <!-- Bandeau de bas de page-->
+  <div class="credit">
+    <img src="Jeunes 6.4 Blanc et Noir.png">
+
+    <div class="partenaires">
+      <!-- Les images des partenaires avec le site web qui leur correspond-->
+      <img src="République française.png" link="https://www.service-public.fr/">
+      <img src="Pyrenées Atlantiques Conseil Général.png" link="https://www.le64.fr/">
+      <img src="Région Aquitaine.png" link="https://www.nouvelle-aquitaine.fr/">
+      <img src="CAF.png"
+        link="https://www.caf.fr/allocataires/caf-des-pyrenees-atlantiques/nous-contacter/points-d-accueil-de-votre-caf">
+      <img src="Assurance Maladie.png" link="https://www.ameli.fr/">
+      <img src="Assises de la Jeunesse.png"
+        link="https://lannuaire.service-public.fr/nouvelle-aquitaine/pyrenees-atlantiques/caf17434-c2b7-4e92-8fe6-6f1546fedaa3">
+      <img src="Université de Pau.png" link="https://www.univ-pau.fr/fr/index.html">
+      <img src="MSA.png" link="https://www.msa.fr/lfp">
+    </div>
+    <p>JEUNES 6.4 est un dispositif issu de la charte de l’engagement pour la
+      jeunesse signée en 2013 par des partenaires institutionnels qui ont décidé de mettre en commun leurs actions pour
+      les jeunes
+      des Pyrénées-Atlantiques.</p>
+  </div>
+  <!-- Lorsqu'une image d'un partenaire est cliquée, l'utilisateur est envoyé sur le site web qui lui correspond-->
+  <script>
+    var partenaires = document.querySelectorAll(".partenaires img");
+
+    for (var i = 0; i < partenaires.length; i++) {
+      partenaires[i].addEventListener("click", function () {
+        var links = this.getAttribute("link");
+        if (links) {
+          window.location.href = links;
+        }
+      });
+    }
+  </script>
+</footer>
+
+</html>
