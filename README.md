@@ -12,3 +12,5 @@ le mot de passe pour accéder aux base de donées est 'root' et l'utilisateur es
 le fichier consultant.php fonctionne malgrès les apparences, il valide bien la demande de référence , vous pouvez le voir dans l'onglet afficher les références dans le fichier accueiljeune.php (passe de en attente -> validée)
 
 il faut avoir préalablement configurer php pour envoyer des mails avec gmail.com
+
+dans les sections ou les mails sont envoyés, les boutons ne marchent pas mais ils étaient censées rediriger vers accueiljeune.php
